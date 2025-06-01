@@ -1,5 +1,12 @@
 # Exam PRO1001 - Project
 
+
+## 🛠️ How to Run It
+Open `index.html` in a web browser. Etc.. Add more info here later - 01.06.2025
+
+## 🧑‍💻 Author
+Daniel Portillo
+
 ## 📄 Project Brief
 
 You have two options for your Project Assignment:
