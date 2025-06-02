@@ -1,0 +1,40 @@
+/* 1. Import Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Arimo:wght@400;700&family=Frank+Ruhl+Libre:wght@300;400;700&display=swap');
+
+/* 2. CSS Variables (colors) */
+:root {
+  --color-bg: #F7F2DE;
+  --color-text: #0B0A08;
+  --color-red: #DC4131;
+  --color-red-dark: #AE2E21;
+  --color-white: #FFFFFF;
+  --color-green: #008F51;
+  --color-light-blue: #E1EAF0;
+
+  --font-header: 'Frank Ruhl Libre', serif;
+  --font-body: 'Arimo', sans-serif;
+}
+
+/* 3. Global Reset & Defaults */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-header);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
