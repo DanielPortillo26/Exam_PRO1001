@@ -38,3 +38,43 @@ a {
   text-decoration: none;
   color: inherit;
 }
+
+/* 4. Navigation */
+header {
+  background-color: var(--color-white);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+nav {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav h1 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--color-red);
+  font-family: var(--font-header);
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+
+nav ul li a {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  text-transform: uppercase;
+  transition: color 0.2s ease;
+}
+
+nav ul li a:hover {
+  color: var(--color-red);
+}
+
