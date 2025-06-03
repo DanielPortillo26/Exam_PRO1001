@@ -33,37 +33,27 @@
     </nav>
   </header>
 
+  
   <main>
-    
-    <!-- PRODUCTS -->
-    <section class="product-preview">
-      <h3>Popular Picks</h3>
-      <div class="product-grid">
-        
-        <article class="product-card">
-          <img src="assets/products/lukasz-rawa-HB_MVtHVMLc-unsplash.jpg" alt="Oats" />
-          <h4>Oats</h4>
-        </article>
-        <article class="product-card">
-          <img src="assets/products/goh-rhy-yan-wUBhu3GXIg0-unsplash.jpg" alt="Carrots" />
-          <h4>Carrots</h4>
-        </article>
-        <article class="product-card">
-          <img src="assets/products/rodrigo-dos-reis-h3AkzboxK4Q-unsplash.jpg" alt="Potatoes" />
-          <h4>Potatos</h4>
-        </article>
-        <article class="product-card">
-          <img src="assets/products/matthew-pilachowski-w1eAFyBLhLM-unsplash.jpg" alt="Garlic">
-          <h4>Garlic</h4>
-        </article>
-        <article class="product-card">
-          <img src="assets/products/goh-rhy-yan-CCxWLAx0qmk-unsplash.jpg" alt="Onions">
-          <h4>Onions</h4>
-        </article>
+    <!-- CONTACT FORM -->
+    <section class="contact-form">
+      <h2>Contact Us</h2>
+      <form id="contactform" novalidate>
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" required />
 
-      </div>
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required />
+
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="6" required></textarea>
+
+        <button type="submit" class="btn">Send Message</button>
+        <p id="formMessage" class="form-feedback"></p>
+      </form>
     </section>
   </main>
+
 
   <footer>
     <div class="footer-content">
