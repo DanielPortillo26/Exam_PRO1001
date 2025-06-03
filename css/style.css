@@ -78,3 +78,18 @@ nav ul li a:hover {
   color: var(--color-red);
 }
 
+
+/* 5. Hero Section */
+.hero {
+  background-image: url('/assets/landing/nina-luong-dp06f70Eyvc-unsplash.jpg'); 
+  background-size: cover;
+  background-position: center;
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  color: var(--color-white);
+  text-align: center;
+  padding: 2rem;
+}
