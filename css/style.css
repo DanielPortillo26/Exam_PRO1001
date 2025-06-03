@@ -246,3 +246,19 @@ input, textarea {
   font-weight: bold;
   text-align: center;
 }
+
+/* 10. MAP */
+.map-section {
+  padding: 4rem 2rem;
+  background-color: var(--color-light-blue);
+  text-align: center;
+}
+
+#map {
+  height: 400px;
+  width: 100%;
+  max-width: 1000px;
+  margin: 2rem auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
