@@ -206,3 +206,43 @@ footer {
   font-size: 2rem;
   margin-bottom: 2rem;
 }
+
+/* 9. CONTACT PAGE */
+.contact-form {
+  padding: 4rem 2rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.contact-form h2 {
+  font-family: var(--font-header);
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+label {
+  font-weight: bold;
+  margin-top: 1rem;
+}
+
+input, textarea {
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-family: var(--font-body);
+  font-size: 1rem;
+}
+
+.form-feedback {
+  margin-top: 1rem;
+  color: var(--color-red);
+  font-weight: bold;
+  text-align: center;
+}
