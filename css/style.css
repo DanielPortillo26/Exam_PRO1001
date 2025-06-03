@@ -1,7 +1,7 @@
-/* 1. Import Fonts */
+/* 1. FONTS: IMPORT */
 @import url('https://fonts.googleapis.com/css2?family=Arimo:wght@400;700&family=Frank+Ruhl+Libre:wght@300;400;700&display=swap');
 
-/* 2. CSS Variables (colors) */
+/* 2. CSS Variables (COLORS) */
 :root {
   --color-bg: #F7F2DE;
   --color-text: #0B0A08;
@@ -15,7 +15,7 @@
   --font-body: 'Arimo', sans-serif;
 }
 
-/* 3. Global Reset & Defaults */
+/* 3. GLOBAL CHARACTERISTICS */
 * {
   margin: 0;
   padding: 0;
@@ -39,7 +39,7 @@ a {
   color: inherit;
 }
 
-/* 4. Navigation */
+/* 4. NAVIGATION */
 header {
   background-color: var(--color-white);
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
@@ -79,7 +79,7 @@ nav ul li a:hover {
 }
 
 
-/* 5. Hero Section */
+/* 5. HERO SECTION */
 .hero {
   background-image: url('/assets/landing/nina-luong-dp06f70Eyvc-unsplash.jpg'); 
   background-size: cover;
@@ -178,4 +178,18 @@ nav ul li a:hover {
   font-family: var(--font-body);
   font-size: 1rem;
   text-transform: uppercase;
+}
+
+/* 7. FOOTER */
+footer {
+  background-color: var(--color-red);
+  color: var(--color-white);
+  padding: 2rem;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+.footer-content {
+  max-width: 1000px;
+  margin: 0 auto;
 }
