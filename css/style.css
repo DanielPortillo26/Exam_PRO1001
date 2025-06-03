@@ -193,3 +193,16 @@ footer {
   max-width: 1000px;
   margin: 0 auto;
 }
+
+/* 8. Product Listing Page: for later use and to give pruduct listing section its own spacing, otherwise delete if not needed - 03.06.2025 */
+.product-listing {
+  padding: 4rem 2rem;
+  background-color: var(--color-bg);
+  text-align: center;
+}
+
+.product-listing h2 {
+  font-family: var(--font-header);
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
