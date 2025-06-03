@@ -132,3 +132,50 @@ nav ul li a:hover {
 .btn:hover {
   background-color: var(--color-red-dark);
 }
+
+/* 6. PRODUCT PREVIEW SECTION */
+.product-preview {
+  padding: 4rem 2rem;
+  background-color: var(--color-white);
+  text-align: center;
+}
+
+.product-preview h3 {
+  font-size: 2rem;
+  font-family: var(--font-header);
+  margin-bottom: 2rem;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* Applies to all the products (carrots, onions, garlig, potatoes, oats*/
+.product-card {
+  background: var(--color-bg);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+}
+
+.product-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.product-card h4 {
+  padding: 1rem;
+  font-family: var(--font-body);
+  font-size: 1rem;
+  text-transform: uppercase;
+}
