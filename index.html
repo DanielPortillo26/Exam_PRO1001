@@ -7,17 +7,24 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Sustainable Food Delivery</title>
 
-  <!-- Stylesheet  -->
+  <!-- Stylesheet: my own designed/implemented style  -->
   <link rel="stylesheet" href="css/style.css" />
-  
+
+  <!-- Leaflet library CSS (necessary for map styling) -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+
   <!-- Fonts  -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Arimo:wght@400;700&family=Frank+Ruhl+Libre:wght@300;400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Arimo:wght@400;700&family=Frank+Ruhl+Libre:wght@300;400;700&display=swap">
 
-  <!-- JS Script -->
-  <script src="js/main.js" defer></script>
+  <!-- JS Script: defer = html waits inntil is fully parsed -->
+  <script src="js/main.js" defer></script> 
   
+  <!-- JS Leaflet -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" defer></script> <!-- Put first since it must load library before my code  -->
+  <script src="js/map.js" defer></script>
+
 </head>
 
 <body>
