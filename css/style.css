@@ -134,6 +134,7 @@ nav ul li a:hover {
   border: none;
   border-radius: 5px;
   transition: background 0.3s ease;
+  text-align: center;
 }
 
 .btn:hover {
@@ -343,3 +344,59 @@ textarea:focus {
   outline: 2px solid var(--color-red);
   outline-offset: 3px;
 }
+
+/* 13. Seasonal Selection Section */
+.seasonal-selection {
+  padding: 4rem 2rem;
+  text-align: center;
+  background-color: var(--color-white);
+}
+
+.seasonal-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.seasonal-selection h3 {
+  font-family: var(--font-header);
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.seasonal-selection p {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  margin-bottom: 2rem;
+}
+
+.seasonal-selection img {
+  width: 448px;
+  height: auto; /* it is too streched with 327px */
+  max-width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+}
+
+.seasonal-btn {
+  background-color: var(--color-red);
+  color: var(--color-white);
+  padding: 0.8rem 2rem;
+  border: none;
+  border-radius: 5px;
+  transition: background 0.3s ease;
+  width: 320px;
+  height: 45px;
+  text-align: center;
+  font-size: 1rem;
+  font-family: var(--font-body);
+  margin: 0 auto;
+
+}
+
+.seasonal-btn:hover {
+  background-color: var(--color-red-dark);
+}
+
