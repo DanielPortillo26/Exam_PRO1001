@@ -266,6 +266,15 @@ input, textarea {
   text-align: center;
 }
 
+/* Partnering farm text */
+.map-title h3 {
+  font-family: var(--font-header);
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  font-weight: 300; /* maybe 400 if too light? */
+  text-transform: uppercase; /* ALL CAPS */
+}
+
 #map {
   height: 400px;
   width: 100%;
@@ -380,6 +389,15 @@ textarea:focus {
   border-radius: 8px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   margin-bottom: 2rem;
+}
+
+/* Text under image added - 04.06.2025*/
+.seasonal-sub {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  margin-bottom: 2rem;
+  color: var(--color-text);
+  max-width: 300px;
 }
 
 .seasonal-btn {
