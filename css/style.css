@@ -523,7 +523,7 @@ textarea:focus {
 }
 
 .product-sub {
-  margin-top: 8px; /* space from title */
+  margin-top: 6px; /* space from title text: i.e. Oats & 1kg*/
   font-family: var(--font-body);
   font-size: 0.95rem;
   color: #444; /* slightly darker gray text */
