@@ -142,56 +142,6 @@ nav ul li a:hover {
   background-color: var(--color-red-dark);
 }
 
-/* 6. PRODUCT PREVIEW SECTION - REMOVED THIS SECTION SINCE PRODUCT PREVIEW NOT LONGER EXIST ? - 04.06.2025 */
-.product-preview {
-  padding: 4rem 2rem;
-  background-color: var(--color-white);
-  text-align: center;
-  position: relative;
-  z-index: 1;
-  /* border: 3px solid green; /* Temporary for visual debbuging */
-}
-
-.product-preview h3 {
-  font-size: 2rem;
-  font-family: var(--font-header);
-  margin-bottom: 2rem;
-}
-
-.product-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-  gap: 2rem;
-  max-width: 1000px;
-  margin: 0 auto;
-}
-
-/* Applies to all the products (carrots, onions, garlig, potatoes, oats */
-.product-card {
-  background: var(--color-bg);
-  border-radius: 8px;
-  overflow: hidden;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-  transition: transform 0.2s ease;
-}
-
-.product-card:hover {
-  transform: translateY(-5px);
-}
-
-.product-card img {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-
-.product-card h4 {
-  padding: 1rem;
-  font-family: var(--font-body);
-  font-size: 1rem;
-  text-transform: uppercase;
-}
-
 /* 7. FOOTER */
 footer {
   background-color: var(--color-red);
@@ -515,3 +465,86 @@ textarea:focus {
   color: var(--color-text);
   max-width: 400px;
 }
+
+
+/* 16. Products Page Layout */
+.product-section {
+  padding: 4rem 2rem;
+  background-color: var(--color-background);
+}
+
+.section-title {
+  font-family: var(--font-header);
+  font-size: 2rem;
+  font-weight: 300;
+  text-align: center;
+  margin-bottom: 45px; /* space from title to grid */
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(455px, 1fr));
+  gap: 29px; /* gap between cards */
+  justify-content: center;
+}
+
+.product-card {
+  text-align: left;
+  position: relative;
+}
+
+.product-img-wrapper {
+  position: relative;
+  width: 455px;
+  height: 432px;
+  overflow: hidden;
+}
+
+.product-img-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.product-img-wrapper:hover img {
+  transform: scale(1.03);
+}
+
+.product-title {
+  margin-top: 18px; /* space from image */
+  font-family: var(--font-body);
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--color-dark);
+}
+
+.product-sub {
+  margin-top: 12px; /* space from title */
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  color: #444; /* slightly darker gray text */
+}
+
+.product-btn {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  background-color: var(--color-dark);
+  color: var(--color-white);
+  border: none;
+  padding: 0.5rem 1rem;
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.product-btn:hover {
+  background-color: #333;
+}
+
+
+
+
