@@ -482,8 +482,10 @@ textarea:focus {
 .product-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(455px, 1fr));
-  gap: 29px; /* gap between images */
+  gap: 29px; /* gap between images according to figma */
   justify-content: center;
+  max-width: 1440px; /* cap total width to avoid spreading of the images if the windows are maximazed */
+  margin: 0 auto;
 }
 
 .product-card {
@@ -496,6 +498,7 @@ textarea:focus {
   width: 455px;
   height: 432px;
   overflow: hidden;
+  border-radius: 10px; /* apply rounding in the hovering effect too */
 }
 
 .product-img-wrapper img {
@@ -546,7 +549,7 @@ textarea:focus {
 
 .product-btn:hover {
   /* background-color: #333; */
-  opacity: 0.8; /* subtle darkening */
+  opacity: 0.6; /* subtle darkening */
 }
 
 
