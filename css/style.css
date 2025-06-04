@@ -323,3 +323,12 @@ input, textarea {
   font-weight: bold;
   cursor: pointer;
 }
+
+/* 12. Accessibility Focus Styles: To allow users that navigate with keyboard can see where they are positioned */
+a:focus,
+button:focus,
+input:focus,
+textarea:focus {
+  outline: 2px solid var(--color-red);
+  outline-offset: 3px;
+}
