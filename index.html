@@ -52,7 +52,6 @@
     <section class="product-preview">
       <h3>Popular Picks</h3>
       <div class="product-grid">
-        
         <article class="product-card">
           <img src="assets/products/lukasz-rawa-HB_MVtHVMLc-unsplash.jpg" alt="Oats" />
           <h4>Oats</h4>
@@ -73,7 +72,6 @@
           <img src="assets/products/goh-rhy-yan-CCxWLAx0qmk-unsplash.jpg" alt="Onions">
           <h4>Onions</h4>
         </article>
-
       </div>
     </section>
 
@@ -83,7 +81,6 @@
       <div id="map"></div>
     </section>
 
-
   </main>
 
   <footer>
@@ -91,7 +88,27 @@
       <p>&copy; 2025 Treider Gård – Drøbakveien 153</p>
     </div>
   </footer>
-  
+
+  <!-- Chatbot UI: Place below the footer. Visually separated from the page, and it'll float above the footer -->
+  <div class="chatbot">
+    <button id="chatToggle" aria-label="Open chat">💬</button>
+
+    <div class="chat-window" hidden>
+      <div class="chat-messages" id="chatMessages"></div>
+
+      <form id="chatForm" class="chat-form" novalidate>
+        <input
+          type="text"
+          id="chatInput"
+          placeholder="What can I help you with..."
+          required
+          aria-label="Chat input"
+        />
+        <button type="submit">Send</button>
+      </form>
+    </div>
+  </div>
+
 </body>
 
 </html>
