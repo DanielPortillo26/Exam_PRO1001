@@ -30,14 +30,52 @@ body {
   line-height: 1.6;
 }
 
-h1, h2, h3, h4 {
-  font-family: var(--font-header);
-}
-
 a {
   text-decoration: none;
   color: inherit;
 }
+
+/* Replaced these for specific font sizes like in figma 
+h1, h2, h3, h4 {
+  font-family: var(--font-header);
+}
+*/
+
+/* Place here to controlled all the sizes across the website. However the 200px is too big, Is this a mistake from the Figma?
+  I override the fonts on each section down. The idea of having controll over all the labes is good but I do not have the time for testing and fixing this.
+*/ 
+h1 {
+  font-size: 200px;
+  font-family: var(--font-header);
+  font-weight: 300;
+}
+
+h2 {
+  font-size: 36px;
+  font-family: var(--font-body);
+  text-transform: uppercase;
+}
+
+h3 {
+  font-size: 20px;
+  font-family: var(--font-body);
+  text-transform: uppercase;
+}
+
+.accent-text {
+  font-size: 20px;
+  font-family: var(--font-header);
+  font-weight: 300;
+}
+
+.large-body {
+  font-size: 20px;
+}
+
+p {
+  font-size: 16px;
+}
+
 
 /* 4. NAVIGATION */
 header {
@@ -592,3 +630,117 @@ textarea:focus {
 }
 
 
+/* FONT STYLES (Desktop default): added last minute, not enough time to think of something else */
+
+.logo-hero {
+  font-family: 'Frank Ruhl Libre', serif;
+  font-weight: 300;
+  font-size: 20px;
+
+.header {
+  font-family: 'Arimo', sans-serif;
+  text-transform: uppercase;
+  font-size: 36px;
+}
+
+.sub-header {
+  font-family: 'Arimo', sans-serif;
+  text-transform: uppercase;
+  font-size: 20px;
+}
+
+.accent-text {
+  font-family: 'Frank Ruhl Libre', serif;
+  font-weight: 300;
+  font-size: 20px;
+}
+
+.body {
+  font-family: 'Arimo', sans-serif;
+  font-size: 16px;
+}
+
+.large-body {
+  font-family: 'Arimo', sans-serif;
+  font-size: 20px;
+}
+
+
+  /* TESTING FOR MOBILE VERSION USING DEVTOOLS IN CHROME - 04.06.2025 */
+@media (max-width: 768px) {
+
+  /* Mobile font overrides */
+  h1 {
+    font-size: 75px;
+  }
+
+  .hero-content h2 {
+    font-size: 24px !important;
+  }
+
+  .hero-content h2 {
+    font-size: 24px !important;
+    font-family: var(--font-header);
+    font-weight: 300;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+
+  h3 {
+    font-size: 18px;
+  }
+
+  .accent-text {
+    font-size: 16px;
+  }
+
+  .large-body {
+    font-size: 18px;
+  }
+
+  p {
+    font-size: 16px;
+  }
+
+  /* tweaks for small screens 
+  .hero {
+    height: auto;
+    padding: 2rem 1rem;
+    text-align: center;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .seasonal-section {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .seasonal-section img {
+    width: 100%;
+    max-width: 350px;
+    height: auto;
+  }
+
+  .product-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .chatbot {
+    bottom: 10px;
+    right: 10px;
+  }
+  
+  */
+
+
+}
+
+
+
+
+}
