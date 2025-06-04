@@ -36,9 +36,13 @@ document.addEventListener("DOMContentLoaded", () => {
   const chatToggle = document.getElementById("chatToggle");
   const chatWindow = document.querySelector(".chat-window");
 
+  console.log("Toggle button:", chatToggle);
+  console.log("Chat window:", chatWindow);
+
   if (chatToggle) {
     chatToggle.addEventListener("click", () => {
       const isHidden = chatWindow.hasAttribute("hidden");
+      console.log("Toggling chatbot. Was hidden:", isHidden);
       if (isHidden) {
         chatWindow.removeAttribute("hidden");
       } else {

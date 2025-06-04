@@ -115,6 +115,7 @@
 
   </main>
 
+  <!-- FOOTER -->
   <footer role="contentinfo">
     <div class="footer-content">
       <p>&copy; 2025 Treider Gård – Drøbakveien 153</p>
@@ -123,20 +124,21 @@
 
   <!-- Chatbot UI: Place below the footer. Visually separated from the page, and it'll float above the footer -->
   <div class="chatbot">    
-    <button id="chatToggle" aria-label="Open or close chatbot" title="Chat with us">💬</button>
+    
+    <button id="chatToggle" class="chat-toggle">💬</button>
 
     <div class="chat-window" hidden>
       <div class="chat-messages" id="chatMessages"></div>
 
-      <form id="chatForm" class="chat-form" novalidate>
+      <form id="chatForm" class="chat-form">
         <input
           type="text"
           id="chatInput"
           placeholder="What can I help you with..."
-          required
-          aria-label="Chat message input"
+          autocomplete="off"
         />
-        <button type="submit">Send</button>
+        
+        <button type="submit" class="send-btn">➤</button>
       </form>
     </div>
   </div>

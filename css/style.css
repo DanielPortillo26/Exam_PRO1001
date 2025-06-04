@@ -235,48 +235,72 @@ input, textarea {
 /* 11. CHATBOT */
 .chatbot {
   position: fixed;
-  bottom: 1.5rem;
-  right: 1.5rem;
+  bottom: 20px;
+  right: 20px;
   z-index: 1000;
 }
 
-#chatToggle {
-  background-color: var(--color-green);
-  color: white;
+.chat-toggle {
+  background-color: var(--color-dark);
+  color: #fff;
   border: none;
-  font-size: 1.5rem;
-  padding: 0.8rem 1rem;
   border-radius: 50%;
+  font-size: 1.5rem;
+  width: 50px;
+  height: 50px;
   cursor: pointer;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
 
 .chat-window {
-  position: absolute;
-  bottom: 3.5rem;
-  right: 0;
-  width: 300px;
+  width: 320px;
+  max-width: 320px;
   background: white;
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  padding: 1rem;
   display: flex;
   flex-direction: column;
-  overflow: hidden;
+  position: absolute;
+  bottom: 60px; /* appears above the button */
+  right: 0;
 }
 
+/* Ensures it overrides the default display: flex, to finally hide the chat window when clicking the messageIcon-btn*/
+.chat-window[hidden] {
+  display: none !important;
+}
+
+
 .chat-messages {
-  height: 200px;
+  height: 300px;
   overflow-y: auto;
-  padding: 1rem;
-  font-size: 0.9rem;
-  background: #f9f9f9;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding-right: 0.5rem;
+  font-family: var(--font-body);
+  font-size: 1rem;
 }
 
 .chat-form {
   display: flex;
-  border-top: 1px solid #ddd;
+  border: 1px solid #ccc;
+  border-radius: 25px;
+  overflow: hidden;
 }
 
+#chatInput {
+  flex: 1;
+  padding: 0.5rem 1rem;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  font-family: var(--font-body);
+  font-size: 1rem;
+}
+
+/* delete */ 
 .chat-form input {
   flex: 1;
   border: none;
@@ -284,6 +308,7 @@ input, textarea {
   font-size: 1rem;
 }
 
+/* delete since Send text button was replaced */
 .chat-form button {
   background-color: var(--color-red);
   color: white;
@@ -291,6 +316,19 @@ input, textarea {
   padding: 0 1rem;
   font-weight: bold;
   cursor: pointer;
+}
+
+.send-btn {
+  background-color: #000;
+  color: #fff;
+  border: none;
+  padding: 0 1rem;
+  cursor: pointer;
+  font-size: 1.1rem;
+}
+
+.send-btn:hover {
+  opacity: 0.8;
 }
 
 /* 12. Accessibility Focus Styles: To allow users that navigate with keyboard can see where they are positioned */
