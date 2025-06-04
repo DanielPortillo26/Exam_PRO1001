@@ -42,7 +42,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const botReply = data.choices?.[0]?.message?.content || "Opps! That one went over my circuits! Try asking a different way?";
       replaceLastMessage("DaniBot", botReply);
     } catch (error) {
-      replaceLastMessage("DaniBot", "Oops! Something went wrong. Try again later, sorry.");
+      replaceLastMessage("DaniBot", "Failed to connect. Wait and try again later.");
       console.error(error);
     }
     // For future ref: When the chat form is submitted, prevents the page from refreshing, grabs the user message, displays it, and then call the OpenAI API to get a reply. - 04.06.2025
