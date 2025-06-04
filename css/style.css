@@ -142,7 +142,7 @@ nav ul li a:hover {
   background-color: var(--color-red-dark);
 }
 
-/* 6. PRODUCT PREVIEW SECTION */
+/* 6. PRODUCT PREVIEW SECTION - REMOVED THIS SECTION SINCE PRODUCT PREVIEW NOT LONGER EXIST ? - 04.06.2025 */
 .product-preview {
   padding: 4rem 2rem;
   background-color: var(--color-white);
@@ -150,7 +150,6 @@ nav ul li a:hover {
   position: relative;
   z-index: 1;
   /* border: 3px solid green; /* Temporary for visual debbuging */
-
 }
 
 .product-preview h3 {
