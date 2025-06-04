@@ -465,7 +465,8 @@ textarea:focus {
   display: flex;
   align-items: center;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-  padding: 0 1rem;
+  padding-left: 90px; /* adding padding from divider like in the pdf brief */
+  text-align: left;
 }
 
 /* Added as a separate container remove the bottom line of the grid, like in the PDF */
@@ -473,6 +474,13 @@ textarea:focus {
   border-bottom: none;
 }
 
+/* To have more flexibility with the padding specification from the pdf brief */
+.step-row {
+  display: flex;
+  flex-direction: row;
+  gap: 0;
+  align-items: center;
+}
 
 .step-title {
   width: 278px;
@@ -487,4 +495,5 @@ textarea:focus {
   font-family: var(--font-body);
   font-size: 1rem;
   color: var(--color-text);
+  max-width: 400px;
 }
