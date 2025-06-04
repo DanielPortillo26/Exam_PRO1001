@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // Show user message
     appendMessage("You", userMessage);
     chatInput.value = "";
-    appendMessage("Bot", "Processing...");
+    appendMessage("DaniBot", "Processing...");
 
     try {
       const response = await fetch("https://api.openai.com/v1/chat/completions", {
@@ -40,9 +40,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
       const data = await response.json();
       const botReply = data.choices?.[0]?.message?.content || "Opps! That one went over my circuits! Try asking a different way?";
-      replaceLastMessage("Bot", botReply);
+      replaceLastMessage("DaniBot", botReply);
     } catch (error) {
-      replaceLastMessage("Bot", "Oops! Something went wrong. Try again later, sorry.");
+      replaceLastMessage("DaniBot", "Oops! Something went wrong. Try again later, sorry.");
       console.error(error);
     }
     // For future ref: When the chat form is submitted, prevents the page from refreshing, grabs the user message, displays it, and then call the OpenAI API to get a reply. - 04.06.2025
