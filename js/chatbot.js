@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const chatInput = document.getElementById("chatInput");
   const chatMessages = document.getElementById("chatMessages");
 
-  const API_KEY = "API_KEY"; // check this later
+  const API_KEY = "API-KEY"; // Paste an api key here 
 
   // Safe chack: if any of the following are missing then exit the method, to avoid errors
   if (!chatForm || !chatInput || !chatMessages) return;
@@ -18,9 +18,9 @@ document.addEventListener("DOMContentLoaded", () => {
     if (!userMessage) return; // Exit if user clicked send but didn't wrote a message
 
     // Show user message
-    appendMessage("You", userMessage);
+    appendMessage("You", "🧑 " + userMessage);
     chatInput.value = "";
-    appendMessage("DaniBot", "Processing...");
+    appendMessage("DaniBot", "🤖 Thinking...");
 
     try {
       const response = await fetch("https://api.openai.com/v1/chat/completions", {
@@ -38,9 +38,21 @@ document.addEventListener("DOMContentLoaded", () => {
         }),
       });
 
+      // NEW: check for non-200 errors: API error response: You exceeded your current quota... Need to make a new accoutn to check this works, not enough time for this for now - 04.06.2025
+      if (!response.ok) {
+        const errorText = await response.text();
+        console.error("API error response:", errorText);
+        replaceLastMessage("DaniBot", "⚠️ Error from OpenAI: " + response.status);
+        return;
+      }
+
+
       const data = await response.json();
+      console.log("OpenAI raw response:", data); // For testing
+
       const botReply = data.choices?.[0]?.message?.content || "Opps! That one went over my circuits! Try asking a different way?";
       replaceLastMessage("DaniBot", botReply);
+
     } catch (error) {
       replaceLastMessage("DaniBot", "Failed to connect. Wait and try again later.");
       console.error(error);
@@ -63,6 +75,5 @@ document.addEventListener("DOMContentLoaded", () => {
       last.innerHTML = `<strong>${sender}:</strong> ${text}`;
     }
   }
-
 
 });
