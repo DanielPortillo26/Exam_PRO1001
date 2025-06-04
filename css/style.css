@@ -117,6 +117,7 @@ nav ul li a:hover {
   font-family: var(--font-header);
   font-weight: 300;
   margin-bottom: 1rem;
+  /* text-transform: uppercase; /* ALL CAPS: Turned off, seemed better to me not in capital letters */ 
 }
 
 .hero p {
