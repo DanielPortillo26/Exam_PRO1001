@@ -154,7 +154,7 @@ nav ul li a:hover {
   margin: 0 auto;
 }
 
-/* Applies to all the products (carrots, onions, garlig, potatoes, oats*/
+/* Applies to all the products (carrots, onions, garlig, potatoes, oats */
 .product-card {
   background: var(--color-bg);
   border-radius: 8px;
@@ -261,4 +261,65 @@ input, textarea {
   margin: 2rem auto;
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* 11. CHATBOT */
+.chatbot {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  z-index: 1000;
+}
+
+#chatToggle {
+  background-color: var(--color-green);
+  color: white;
+  border: none;
+  font-size: 1.5rem;
+  padding: 0.8rem 1rem;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.chat-window {
+  position: absolute;
+  bottom: 3.5rem;
+  right: 0;
+  width: 300px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.chat-messages {
+  height: 200px;
+  overflow-y: auto;
+  padding: 1rem;
+  font-size: 0.9rem;
+  background: #f9f9f9;
+}
+
+.chat-form {
+  display: flex;
+  border-top: 1px solid #ddd;
+}
+
+.chat-form input {
+  flex: 1;
+  border: none;
+  padding: 0.8rem;
+  font-size: 1rem;
+}
+
+.chat-form button {
+  background-color: var(--color-red);
+  color: white;
+  border: none;
+  padding: 0 1rem;
+  font-weight: bold;
+  cursor: pointer;
 }
