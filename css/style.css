@@ -83,12 +83,16 @@ nav ul li a:hover {
 
 /* 5. HERO SECTION */
 .hero {
-  background-image: url('/assets/landing/markus-spiske-WcLzVLbUP5g-unsplash.jpg'); 
+  background-image: url("../assets/landing/markus-spiske-WcLzVLbUP5g-unsplash.jpg"); 
   background-size: cover;
   background-position: center;
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
+  height: 80vh;
+  /* border: 3px solid red; /* Temporary for visual debbugin */
+
 }
 
 .hero-overlay {
@@ -141,6 +145,10 @@ nav ul li a:hover {
   padding: 4rem 2rem;
   background-color: var(--color-white);
   text-align: center;
+  position: relative;
+  z-index: 1;
+  /* border: 3px solid green; /* Temporary for visual debbuging */
+
 }
 
 .product-preview h3 {
