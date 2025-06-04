@@ -636,6 +636,7 @@ textarea:focus {
   font-family: 'Frank Ruhl Libre', serif;
   font-weight: 300;
   font-size: 20px;
+}
 
 .header {
   font-family: 'Arimo', sans-serif;
@@ -665,82 +666,59 @@ textarea:focus {
   font-size: 20px;
 }
 
-
   /* TESTING FOR MOBILE VERSION USING DEVTOOLS IN CHROME - 04.06.2025 */
-@media (max-width: 768px) {
+  @media (max-width: 768px) {
 
-  /* Mobile font overrides */
-  h1 {
-    font-size: 75px;
+    /* Mobile font overrides */
+    h1 {
+      font-size: 18px !important;
+    }
+
+    h2 {
+      font-size: 24px !important;
+    }
+
+    h3 {
+      font-size: 18px !important;
+    }
+
+    .accent-text {
+      font-size: 16px !important;
+    }
+
+    .large-body {
+      font-size: 18px !important;
+    }
+
+    p {
+      font-size: 16px !important;
+    }
+
+    /* tweaks for small screens 
+    .seasonal-section {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    .seasonal-section img {
+      width: 100%;
+      max-width: 350px;
+      height: auto;
+    }
+
+    .product-grid {
+      grid-template-columns: 1fr;
+      gap: 30px;
+    }
+
+    .chatbot {
+      bottom: 10px;
+      right: 10px;
+    }
+    */
+
+
   }
 
-  .hero-content h2 {
-    font-size: 24px !important;
-  }
 
-  .hero-content h2 {
-    font-size: 24px !important;
-    font-family: var(--font-header);
-    font-weight: 300;
-    text-align: center;
-    margin-bottom: 1rem;
-  }
-
-  h3 {
-    font-size: 18px;
-  }
-
-  .accent-text {
-    font-size: 16px;
-  }
-
-  .large-body {
-    font-size: 18px;
-  }
-
-  p {
-    font-size: 16px;
-  }
-
-  /* tweaks for small screens 
-  .hero {
-    height: auto;
-    padding: 2rem 1rem;
-    text-align: center;
-  }
-
-  .hero h1 {
-    font-size: 2rem;
-  }
-
-  .seasonal-section {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-
-  .seasonal-section img {
-    width: 100%;
-    max-width: 350px;
-    height: auto;
-  }
-
-  .product-grid {
-    grid-template-columns: 1fr;
-    gap: 30px;
-  }
-
-  .chatbot {
-    bottom: 10px;
-    right: 10px;
-  }
-  
-  */
-
-
-}
-
-
-
-
-}
