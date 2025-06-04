@@ -1,4 +1,7 @@
+// DOMContentLoaded block - 04.06.2025
 document.addEventListener("DOMContentLoaded", () => {
+
+  // Contact Form Logic - 04.06.2025
   const form = document.getElementById("contactForm");
   const message = document.getElementById("formMessage");
 
@@ -28,4 +31,20 @@ document.addEventListener("DOMContentLoaded", () => {
       form.reset();
     });
   }
+
+  // Chatbot Logic - 04.06.2025
+  const chatToggle = document.getElementById("chatToggle");
+  const chatWindow = document.querySelector(".chat-window");
+
+  if (chatToggle) {
+    chatToggle.addEventListener("click", () => {
+      const isHidden = chatWindow.hasAttribute("hidden");
+      if (isHidden) {
+        chatWindow.removeAttribute("hidden");
+      } else {
+        chatWindow.setAttribute("hidden", true);
+      }
+    });
+  }
+
 });
