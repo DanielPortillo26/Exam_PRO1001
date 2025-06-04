@@ -402,3 +402,87 @@ textarea:focus {
   background-color: var(--color-red-dark);
 }
 
+/* 15. How It Works (grid from PDF brief) */
+.how-it-works {
+  background-color: #F7F2DE;
+  height: 785px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.how-wrapper {
+  display: flex;
+  flex-direction: row;
+  max-width: 1200px;
+  width: 100%;
+  padding: 2rem;
+  position: relative;
+}
+
+.how-heading {
+  font-family: var(--font-header);
+  font-size: 2.2rem;
+  font-weight: 300;
+  color: var(--color-dark);
+  text-transform: capitalize;
+  text-align: center;
+  max-width: 200px;
+}
+
+/* Added as a separate container to make the vertical line like in the PDF */
+.how-left {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding-right: 2rem;
+}
+
+/* Adde as a separate container to make the vertical line like in the PDF */
+.vertical-line {
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.how-steps {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.how-step {
+  height: 197px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 0 1rem;
+}
+
+/* Added as a separate container remove the bottom line of the grid, like in the PDF */
+.how-step.no-border {
+  border-bottom: none;
+}
+
+
+.step-title {
+  width: 278px;
+  font-family: var(--font-header);
+  font-size: 1.1rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: var(--color-dark);
+}
+
+.step-desc {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  color: var(--color-text);
+}
