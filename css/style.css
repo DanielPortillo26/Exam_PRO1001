@@ -483,6 +483,7 @@ textarea:focus {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(455px, 1fr));
   gap: 29px; /* gap between images according to figma */
+  row-gap: 60px;    /* vertical spacing between image rows, according to the figma pdf */
   justify-content: center;
   max-width: 1440px; /* cap total width to avoid spreading of the images if the windows are maximazed */
   margin: 0 auto;
@@ -522,7 +523,7 @@ textarea:focus {
 }
 
 .product-sub {
-  margin-top: 12px; /* space from title */
+  margin-top: 8px; /* space from title */
   font-family: var(--font-body);
   font-size: 0.95rem;
   color: #444; /* slightly darker gray text */
