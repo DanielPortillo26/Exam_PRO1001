@@ -80,7 +80,6 @@ nav ul li a:hover {
   color: var(--color-red);
 }
 
-
 /* 5. HERO SECTION */
 .hero {
   background-image: url("../assets/landing/markus-spiske-WcLzVLbUP5g-unsplash.jpg"); 
@@ -92,7 +91,6 @@ nav ul li a:hover {
   position: relative;
   height: 80vh;
   /* border: 3px solid red; /* Temporary for visual debbugin */
-
 }
 
 .hero-overlay {
@@ -484,7 +482,7 @@ textarea:focus {
 .product-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(455px, 1fr));
-  gap: 29px; /* gap between cards */
+  gap: 29px; /* gap between images */
   justify-content: center;
 }
 
@@ -505,6 +503,7 @@ textarea:focus {
   height: 100%;
   object-fit: cover;
   transition: transform 0.3s ease;
+  border-radius: 10px; /* smooth edges like figma */
 }
 
 .product-img-wrapper:hover img {
@@ -530,21 +529,24 @@ textarea:focus {
   position: absolute;
   bottom: 20px;
   right: 20px;
-  background-color: var(--color-dark);
-  color: var(--color-white);
+  background-color: #000;
+  /* background-color: var(--color-dark); */
+  /* color: var(--color-white); */
+  color: #fff;
   border: none;
   padding: 0.5rem 1rem;
   font-family: var(--font-body);
   font-size: 0.9rem;
   border-radius: 25px;
   cursor: pointer;
-  transition: background-color 0.2s ease;
+  /* transition: background-color 0.2s ease; */
+  transition: opacity 0.2s ease;
+  opacity: 1;
 }
 
 .product-btn:hover {
-  background-color: #333;
+  /* background-color: #333; */
+  opacity: 0.8; /* subtle darkening */
 }
-
-
 
 
