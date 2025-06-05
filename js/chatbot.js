@@ -80,7 +80,10 @@ document.addEventListener("DOMContentLoaded", () => {
       msg.classList.add("bot");
     }
 
-    msg.innerHTML = text;
+    // Use textContent to avoid HTML injection issues
+    msg.textContent = text;
+    // msg.innerHTML = text;
+
     chatMessages.appendChild(msg);
     chatMessages.scrollTop = chatMessages.scrollHeight;
   }
