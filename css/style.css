@@ -11,7 +11,8 @@
   --color-green: #008F51;
   --color-light-blue: #E1EAF0;
 
-  --font-header: 'Frank Ruhl Libre', serif;
+  --font-logo: 'Frank Ruhl Libre', serif;
+  --font-header: 'Arimo', sans-serif;
   --font-body: 'Arimo', sans-serif;
   --font-accent: 'Frank Ruhl Libre', serif;
 }
@@ -48,7 +49,7 @@ h1, h2, h3, h4 {
 h1 {
   font-size: 200px;
   font-family: var(--font-header);
-  font-weight: 300;
+  font-weight: 200;
 }
 
 h2 {
@@ -97,24 +98,32 @@ nav {
   position: relative;
 }
 
-/* Hero - title (orverwritten nede) */
-nav h1 {
-  font-size: 5.8rem;
-  font-weight: 700;
-  color: var(--color-red);
-  font-family: var(--font-header);
-  text-transform: uppercase;
-}
-
 /* Treider Gård title */
 nav h1.logo {
   font-size: 1.2rem;
-  font-weight: 700;
+  font-weight: 600;
   color: var(--color-red);
   font-family: var(--font-header);
   text-transform: uppercase;
   z-index: 1002;
 }
+
+/* Hero - title (orverwritten nede) */
+nav h1 {
+  font-size: 200px;
+  font-weight: 200;
+  color: var(--color-red);
+  font-family: var(--font-logo);
+  text-transform: uppercase;
+}
+
+/* Sub-text: norwegian farm.."*/
+p {
+  font-size: 16px;
+  font-family: var(--font-body);
+}
+
+
 
 /* Title over the line in toggle mobile menu */
 .logo.mobile-only{
@@ -272,24 +281,26 @@ nav ul li a:hover {
 
 .hero-content {
   position: relative;
-  max-width: 700px;
+  max-width: 50%;
   text-align: center;
   color: white;
   padding: 2rem;
 }
 
+/* Fresh and enviromental.. title */
 .hero h2 {
-  font-size: 4rem;
-  font-family: var(--font-header);
+  font-size: 64px; /* Figma Pdf says 200px but it is way too big */
+  font-family: var(--font-logo);
   font-weight: 300;
   margin-bottom: 1rem;
   /* text-transform: uppercase; /* ALL CAPS: Turned off, seemed better to me not in capital letters */ 
 }
 
+/* Subtext */
 .hero p {
-  font-size: 1.25rem;
-  margin-bottom: 2rem;
-  font-family: var(--font-body);
+  font-size: 24px; /* Figma Pdf says 20px but it is a bit too little */
+  margin-bottom: 3rem; 
+  font-family: var(--font-header);
 }
 
 .btn {
@@ -307,6 +318,35 @@ nav ul li a:hover {
 .btn:hover {
   background-color: var(--color-red-dark);
 }
+
+/* Mobile nav */
+@media (max-width: 768px) {
+  
+  .hero-content {
+    position: relative;
+    max-width: 100%;
+    text-align: center;
+    color: white;
+    padding: 2rem;
+  }
+  
+  /* Fresh and enviromental.. title */
+  .hero h2 {
+    font-size: 40px; /* Figma Pdf says 75px but it is way too big */
+    font-weight: 300;
+    margin-bottom: 1rem;
+  }
+
+  /* Subtext */
+  .hero p {
+    font-size: 20px; /* Figma Pdf says 16px but it is a bit too little */
+    margin-bottom: 3rem; 
+  }
+
+}
+
+
+
 
 /* 7. FOOTER */
 footer {
