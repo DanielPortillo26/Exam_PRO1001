@@ -1,6 +1,19 @@
 // DOMContentLoaded block - 04.06.2025
 document.addEventListener("DOMContentLoaded", () => {
 
+  // Mobile toggle burger menu logic - added after desktop version was done - 05.06.2025
+  const navToggle = document.getElementById("navToggle");
+  const navLinks = document.querySelector(".nav-links");
+
+  if (navToggle && navLinks) {
+    navToggle.addEventListener("click", () => {
+      navLinks.classList.toggle("active");
+
+      // Toggle between ☰ ↔ X icons
+      navToggle.textContent = navLinks.classList.contains("active") ? "✖" : "☰";
+    });
+  }
+
   // Contact Form Logic - 04.06.2025
   const form = document.getElementById("contactForm");
   const message = document.getElementById("formMessage");

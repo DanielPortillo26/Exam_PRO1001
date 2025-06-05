@@ -118,6 +118,41 @@ nav ul li a:hover {
   color: var(--color-red);
 }
 
+/* For mobile version - Added after style was done for destktop */
+.nav-toggle {
+  display: none;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--color-text);
+}
+
+/* Responsive nav */
+@media (max-width: 768px) {
+  .nav-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 90px; /* height of header */
+    right: 0;
+    background-color: var(--color-white);
+    width: 100%;
+    text-align: center;
+    gap: 1.5rem;
+    padding: 1rem 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+}
+
 /* 5. HERO SECTION */
 .hero {
   background-image: url("../assets/landing/markus-spiske-WcLzVLbUP5g-unsplash.jpg"); 
@@ -693,30 +728,6 @@ textarea:focus {
     p {
       font-size: 16px !important;
     }
-
-    /* tweaks for small screens 
-    .seasonal-section {
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-    }
-
-    .seasonal-section img {
-      width: 100%;
-      max-width: 350px;
-      height: auto;
-    }
-
-    .product-grid {
-      grid-template-columns: 1fr;
-      gap: 30px;
-    }
-
-    .chatbot {
-      bottom: 10px;
-      right: 10px;
-    }
-    */
 
 
   }
