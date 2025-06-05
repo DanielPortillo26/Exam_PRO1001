@@ -22,14 +22,32 @@
 
 <body>
   
-  <header role="banner">
+  <!-- NAVIGATION BANNER: Updated to support both desktop & Mobile across all its pages - 05.06.2025 -->
+  <header role="banner">    
     <nav>
-      <h1>Treider Gård</h1>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="products.html">Products</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
+      <h1 class="logo">Treider Gård</h1>
+
+       <!-- Toggle button for mobile -->
+      <button id="navToggle" class="nav-toggle" aria-label="Toggle navigation">
+        ☰
+      </button>
+
+      <!-- Links for both desktop & mobile -->
+      <div class="nav-links">
+        <h1 class="logo mobile-only">Treider Gård</h1>
+        <hr class="mobile-divider" />
+
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li class="mobile-only"><a href="#chatbot">Chat</a></li>
+        </ul>
+
+        <!-- Bottom button, mobile only -->
+        <button class="checkout-btn mobile-only">CheckOut</button>
+
+      </div>
     </nav>
   </header>
 
