@@ -9,6 +9,8 @@ document.addEventListener("DOMContentLoaded", () => {
   // Safe chack: if any of the following are missing then exit the method, to avoid errors
   if (!chatForm || !chatInput || !chatMessages) return;
 
+  // Welcome message added - 05.06.2025
+  // appendMessage("DaniBot", "🤖 What can I help you with...");
 
   // EVENT: runs this function (async, to allow using await) when user submits the chat form by presing Enter/Send
   chatForm.addEventListener("submit", async (e) => {
