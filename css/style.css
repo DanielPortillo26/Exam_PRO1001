@@ -115,6 +115,15 @@ nav h1.logo {
   z-index: 1002;
 }
 
+/* Title over the line in toggle mobile menu */
+.logo.mobile-only{
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--color-white);
+  font-family: var(--font-body);
+  text-transform: uppercase;
+}
+
 nav ul {
   list-style: none;
   display: flex;
