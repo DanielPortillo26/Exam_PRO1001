@@ -431,6 +431,7 @@ input, textarea {
   position: absolute;
   bottom: 60px; /* appears above the button */
   right: 0;
+  z-index: 1000;
 }
 
 /* Ensures it overrides the default display: flex, to finally hide the chat window when clicking the messageIcon-btn*/
@@ -438,44 +439,102 @@ input, textarea {
   display: none !important;
 }
 
+/*
+.chat-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: var(--font-body);
+  font-size: 1rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
 
+.chat-close {
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  color: var(--color-red);
+}
+*/
+
+/* Chat messages */
 .chat-messages {
   height: 300px;
   overflow-y: auto;
   display: flex;
   flex-direction: column;
   gap: 0.75rem;
-  padding-right: 0.5rem;
+  padding: 0.5rem;
   font-family: var(--font-body);
   font-size: 1rem;
 }
 
+.chat-messages p {
+  padding: 10px 15px;
+  border-radius: 25px;
+  max-width: 75%;
+  word-wrap: break-word;
+}
+
+.chat-messages p.user {
+  background-color: var(--color-light-blue);
+  align-self: flex-end;
+  border-bottom-right-radius: 0;
+}
+
+.chat-messages p.bot {
+  background-color: var(--color-bg);
+  align-self: flex-start;
+  border-bottom-left-radius: 0;
+  color: var(--color-text);
+}
+
+/* Chat Form */
 .chat-form {
   display: flex;
-  border: 1px solid #ccc;
-  border-radius: 25px;
-  overflow: hidden;
+  margin-top: 1rem;
+  gap: 0.5rem;
+  align-items: center;
 }
 
 #chatInput {
   flex: 1;
   padding: 0.5rem 1rem;
-  border: none;
+  border: 1px solid #ccc;
+  border-radius: 25px;
   outline: none;
   font-size: 1rem;
   font-family: var(--font-body);
   font-size: 1rem;
 }
 
-/* delete */ 
-.chat-form input {
-  flex: 1;
+.chat-form button.send-btn {
+  background-color: var(--color-red);
+  color: #fff;
   border: none;
-  padding: 0.8rem;
-  font-size: 1rem;
+  padding: 0.6rem 1rem;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: right;
+  justify-content: center;
 }
 
-/* delete since Send text button was replaced */
+/* 
+/* delete *
+.chat-form input {
+  flex: 1;
+  padding: 0.5rem 1rem;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  font-family: var(--font-body);
+}
+
+/* delete since Send text button was replaced *
 .chat-form button {
   background-color: var(--color-red);
   color: white;
@@ -485,6 +544,7 @@ input, textarea {
   cursor: pointer;
 }
 
+/* delete? *
 .send-btn {
   background-color: #000;
   color: #fff;
@@ -493,9 +553,51 @@ input, textarea {
   cursor: pointer;
   font-size: 1.1rem;
 }
+*/
 
 .send-btn:hover {
   opacity: 0.8;
+  background-color: var(--color-red-dark);
+}
+
+/* Tweak for Mobile version */
+@media (max-width: 768px) {
+  .chat-window {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    max-width: 100vw;
+    max-height: 100vh;
+    padding: 1rem;
+    border-radius: 0;
+    z-index: 2000;
+    background: white;
+  }
+
+  .chat-toggle {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1500;
+  
+  }
+
+  .chat-messages {
+    height: calc(100vh - 140px); /* Adjust for full screen */
+  }
+
+  /*
+  .chat-form {
+    flex-direction: row;
+  }
+
+  .chat-form input {
+    font-size: 1rem;
+  }
+  */
+
 }
 
 /* 12. Accessibility Focus Styles: To allow users that navigate with keyboard can see where they are positioned */

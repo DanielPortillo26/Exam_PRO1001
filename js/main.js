@@ -48,6 +48,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // Chatbot Logic - 04.06.2025
   const chatToggle = document.getElementById("chatToggle");
   const chatWindow = document.querySelector(".chat-window");
+  const chatClose = document.getElementById("chatClose");
 
   console.log("Toggle button:", chatToggle);
   console.log("Chat window:", chatWindow);
@@ -62,6 +63,18 @@ document.addEventListener("DOMContentLoaded", () => {
         chatWindow.setAttribute("hidden", true);
       }
     });
+  }
+  
+
+
+
+  // For a CHAT button in the mobile nav
+  if (chatMenuBtn && chatWindow) {
+    chatMenuBtn.addEventListener("click", () => {
+      chatWindow.removeAttribute("hidden");
+      document.querySelector(".nav-links").classList.remove("active");
+      document.getElementById("navToggle").textContent = "☰";
+    })
   }
 
 });

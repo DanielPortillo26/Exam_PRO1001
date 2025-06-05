@@ -62,17 +62,42 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
   // Helper funcitions - 04.06.2025
+
+  //function appendMessage(sender, text) {
+  //  const msg = document.createElement("p");
+  //  msg.innerHTML = `<strong>${sender}:</strong> ${text}`;
+  //  chatMessages.appendChild(msg);
+  //  chatMessages.scrollTop = chatMessages.scrollHeight;
+  // }
+
   function appendMessage(sender, text) {
     const msg = document.createElement("p");
-    msg.innerHTML = `<strong>${sender}:</strong> ${text}`;
+
+    // Apply class based on who sent the message
+    if (sender === "You") {
+      msg.classList.add("user");
+    } else {
+      msg.classList.add("bot");
+    }
+
+    msg.innerHTML = text;
     chatMessages.appendChild(msg);
     chatMessages.scrollTop = chatMessages.scrollHeight;
   }
 
+
+  // function replaceLastMessage(sender, text) {
+  //  const last = chatMessages.lastElementChild;
+  //  if (last) {
+  //    last.innerHTML = `<strong>${sender}:</strong> ${text}`;
+  //  }
+  // }
+
   function replaceLastMessage(sender, text) {
     const last = chatMessages.lastElementChild;
     if (last) {
-      last.innerHTML = `<strong>${sender}:</strong> ${text}`;
+      last.className = sender === "You" ? "user" : "bot";
+      last.innerHTML = text;
     }
   }
 
