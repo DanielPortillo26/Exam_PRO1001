@@ -83,7 +83,7 @@ p {
 header {
   background-color: var(--color-white);
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
-  height: 90px;
+  height: 65px;
   position: relative;
   z-index: 1001;
 }
@@ -100,7 +100,7 @@ nav {
 
 /* Treider Gård title */
 nav h1.logo {
-  font-size: 1.2rem;
+  font-size: 20px;
   font-weight: 600;
   color: var(--color-red);
   font-family: var(--font-header);
@@ -108,26 +108,19 @@ nav h1.logo {
   z-index: 1002;
 }
 
-/* Hero - title (orverwritten nede) */
+/* Seems unnecessary since the logo is wrapped in a container above
 nav h1 {
-  font-size: 200px;
+  font-size: 800px;
   font-weight: 200;
   color: var(--color-red);
   font-family: var(--font-logo);
   text-transform: uppercase;
 }
+*/
 
-/* Sub-text: norwegian farm.."*/
-p {
-  font-size: 16px;
-  font-family: var(--font-body);
-}
-
-
-
-/* Title over the line in toggle mobile menu */
+/* "MENU" Title over the line in toggle mobile menu */
 .logo.mobile-only{
-  font-size: 1.3rem;
+  font-size: 20px;
   font-weight: 600;
   color: var(--color-white);
   font-family: var(--font-body);
@@ -344,8 +337,6 @@ nav ul li a:hover {
   }
 
 }
-
-
 
 
 /* 7. FOOTER */
@@ -594,7 +585,7 @@ textarea:focus {
 
 /* 13. Seasonal Selection Section */
 .seasonal-selection {
-  padding: 4rem 2rem;
+  padding: 4rem 2rem; /* Unsure this was given in the Figma PDF, I gave my own */
   text-align: center;
   background-color: var(--color-white);
 }
@@ -606,18 +597,30 @@ textarea:focus {
   text-align: center;
 }
 
+/* Seasonal Selection title */
 .seasonal-selection h3 {
   font-family: var(--font-header);
-  font-size: 2rem;
+  font-size: 36px;
   margin-bottom: 0.5rem;
   font-weight: 300; /* maybe 400 if too light? */
   text-transform: uppercase; /* ALL CAPS */
 }
 
+/* Subtext */
 .seasonal-selection p {
   font-family: var(--font-body);
-  font-size: 1rem;
+  font-size: 20px;
   margin-bottom: 2rem;  
+}
+
+/* Text under image added - 04.06.2025*/
+.seasonal-sub {
+  font-family: var(--font-body);
+  font-size: 18px;
+  margin-bottom: 2rem;
+  color: var(--color-text);
+  max-width: 20%;
+  margin-top: 2rem;
 }
 
 .seasonal-selection img {
@@ -626,17 +629,9 @@ textarea:focus {
   max-width: 100%;
   border-radius: 8px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  margin-bottom: 2rem;
+  /* margin-bottom: 2rem; */
 }
 
-/* Text under image added - 04.06.2025*/
-.seasonal-sub {
-  font-family: var(--font-body);
-  font-size: 1rem;
-  margin-bottom: 2rem;
-  color: var(--color-text);
-  max-width: 300px;
-}
 
 .seasonal-btn {
   background-color: var(--color-red);
@@ -656,6 +651,36 @@ textarea:focus {
 
 .seasonal-btn:hover {
   background-color: var(--color-red-dark);
+}
+
+@media (max-width: 768px) {
+
+  /* Seasonal Selection title */
+  .seasonal-selection h3 {
+    font-size: 24px;
+    margin-bottom: 8px;
+  }
+
+  /* Subtext: Updated every week...*/
+  .seasonal-selection p {
+    font-size: 18px;
+    margin-bottom: 45px;  
+  }
+
+  /* Text under image added - 04.06.2025*/
+  .seasonal-sub {
+    font-size: 16px;
+    margin-top: 45px;
+    margin-bottom: 45px;
+    color: var(--color-text);
+    max-width: 100%;
+  }
+
+  .seasonal-selection {
+    padding-top: 90px; /* adapted from Figma PDF */
+    padding-bottom: 90px;
+  }
+
 }
 
 /* 15. How It Works (grid from PDF brief) */
@@ -946,6 +971,7 @@ textarea:focus {
   /* For Products Layout Mobile version */
   /* Popular picks */ 
   .section-title {
+    font-size: 24px;
     text-align: left;
     margin-left: 16px;
     margin-top: 60px; /* Figma says 90px, but it looks excesive */
@@ -954,6 +980,7 @@ textarea:focus {
 
   .mobile-subtext {
     text-align: left;
+    font-size: 16px;
     margin-left: 16px;
     margin-right: 16px;
     display: block; /* To be shown only on mobile version */
