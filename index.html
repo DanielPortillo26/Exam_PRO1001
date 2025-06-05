@@ -148,29 +148,22 @@
   <!-- Chatbot UI: Place below the footer. Visually separated from the page, and it'll float above the footer -->
   <div class="chatbot">    
   <button id="chatToggle" class="chat-toggle" aria-label="Open chat">💬</button>
-
     <div class="chat-window" hidden>
-      <div class="chat-header">
-        <!--
-        <span>DaniBot</span>
-        <button id="chatClose" class="chat-close" aria-label="Close chat">✖</button>
-        -->
+      <div class="chat-messages" id="chatMessages">
+        <p class="bot">🤖 What can I help you with...</p>
       </div>
-
-      <div class="chat-messages" id="chatMessages"></div>
-
       <form id="chatForm" class="chat-form">
         <input
           type="text"
           id="chatInput"
-          placeholder="What can I help you with..."
+          placeholder="Type your question..."
           autocomplete="off"
         />
         <button type="submit" class="send-btn">➤</button>
       </form>
     </div>
-    
   </div>
+
 
 </body>
 
