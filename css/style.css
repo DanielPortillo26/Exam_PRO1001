@@ -632,7 +632,7 @@ textarea:focus {
   flex-direction: row;
   max-width: 1200px;
   width: 100%;
-  /* padding: 2rem; Unnecesary for the mobile version */
+  /* padding: 2rem; /* Unnecesary for the mobile version */
   position: relative;
 }
 
@@ -644,7 +644,7 @@ textarea:focus {
   align-items: center;
   justify-content: center;
   position: relative;
-  /* padding-right: 2rem; Remove since interfere in the mobile version horizontal lines */
+  padding-right: 2rem; /* Remove since interfere in the mobile version horizontal lines */
 }
 
 /* Added as a separate container to make the vertical line like in the PDF */
@@ -719,13 +719,24 @@ textarea:focus {
 /* Added mobile version */
 @media (max-width: 768px) {
 
+  /* Exclusive for create horizontal lines: How it works title: specs From Figma pdf */
+  .how-heading-wrapper {
+    border-top: 1px solid rgba(0, 0, 0, 0.15);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+    width: 100vw;
+    margin-left: -1rem;
+    margin-right: -1rem;
+    text-align: center;
+  }
+
   /* How it works title: specs From Figma pdf */
   .how-heading {
     font-size: 24px; /* From Figma pdf */
-    max-width: 100%;
+    max-width: 50%; /* To have it in 2 lines */
+    margin: 0 auto; /* Centers the block horizontally */
+    text-align: center;
     padding-top: 90px;
     padding-bottom: 45px;
-
   }
 
   /* Sub-header: specs From Figma pdf */
@@ -736,7 +747,6 @@ textarea:focus {
     padding-top: 45px;
     padding-left: 45px;
     padding-right: 45px;
-
   }
 
   /* Sub-description*/
@@ -784,9 +794,7 @@ textarea:focus {
     align-items: center;
   }
 
-  
 }
-
 
 
 /* 16. Products Page Layout */
