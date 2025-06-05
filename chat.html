@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Chat – Treider Gård</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="js/chatbot.js" defer></script>
+</head>
+<body>
+
+  <div class="mobile-chat-container">
+    <header class="chat-header">
+      <a href="index.html" class="back-btn">← Back</a>
+    </header>
+
+    <main class="chat-messages" id="chatMessages"></main>
+
+    <form id="chatForm" class="chat-form">
+      <input
+        type="text"
+        id="chatInput"
+        placeholder="What can I help you with..."
+        autocomplete="off"
+      />
+      <button type="submit" class="send-btn">➤</button>
+    </form>
+  </div>
+
+</body>
+</html>
