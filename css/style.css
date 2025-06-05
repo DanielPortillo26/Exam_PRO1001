@@ -13,6 +13,7 @@
 
   --font-header: 'Frank Ruhl Libre', serif;
   --font-body: 'Arimo', sans-serif;
+  --font-accent: 'Frank Ruhl Libre', serif;
 }
 
 /* 3. GLOBAL CHARACTERISTICS */
@@ -620,7 +621,7 @@ textarea:focus {
 /* 15. How It Works (grid from PDF brief) */
 .how-it-works {
   background-color: #F7F2DE;
-  height: 785px;
+  /* height: 785px; */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -631,18 +632,8 @@ textarea:focus {
   flex-direction: row;
   max-width: 1200px;
   width: 100%;
-  padding: 2rem;
+  /* padding: 2rem; Unnecesary for the mobile version */
   position: relative;
-}
-
-.how-heading {
-  font-family: var(--font-header);
-  font-size: 2.2rem;
-  font-weight: 300;
-  color: var(--color-dark);
-  text-transform: capitalize;
-  text-align: center;
-  max-width: 200px;
 }
 
 /* Added as a separate container to make the vertical line like in the PDF */
@@ -653,10 +644,10 @@ textarea:focus {
   align-items: center;
   justify-content: center;
   position: relative;
-  padding-right: 2rem;
+  /* padding-right: 2rem; Remove since interfere in the mobile version horizontal lines */
 }
 
-/* Adde as a separate container to make the vertical line like in the PDF */
+/* Added as a separate container to make the vertical line like in the PDF */
 .vertical-line {
   position: absolute;
   right: 0;
@@ -671,8 +662,7 @@ textarea:focus {
   display: flex;
   flex-direction: column;
   gap: 0;
-  align-items: flex-start;
-  
+  align-items: flex-start;  
 }
 
 .how-step {
@@ -697,21 +687,106 @@ textarea:focus {
   align-items: center;
 }
 
+/* How it works */
+.how-heading {
+  font-family: var(--font-header);
+  font-size: 36px; /* From Figma pdf */
+  font-weight: 300;
+  color: var(--color-dark);
+  text-transform: capitalize;
+  text-align: center;
+  max-width: 200px;
+}
+
+/* Sub-header*/
 .step-title {
   width: 278px;
   font-family: var(--font-header);
-  font-size: 1.1rem;
+  font-size: 20px; /* From Figma pdf */
   font-weight: 400;
   text-transform: uppercase;
   color: var(--color-dark);
 }
 
+/* Sub-description*/
 .step-desc {
   font-family: var(--font-body);
-  font-size: 1rem;
+  font-size: 16px; /* From Figma pdf */
   color: var(--color-text);
   max-width: 400px;
 }
+
+/* Added mobile version */
+@media (max-width: 768px) {
+
+  /* How it works title: specs From Figma pdf */
+  .how-heading {
+    font-size: 24px; /* From Figma pdf */
+    max-width: 100%;
+    padding-top: 90px;
+    padding-bottom: 45px;
+
+  }
+
+  /* Sub-header: specs From Figma pdf */
+  .step-title {
+    width: auto;
+    font-size: 20px; /* From Figma pdf */
+    text-align: center;
+    padding-top: 45px;
+    padding-left: 45px;
+    padding-right: 45px;
+
+  }
+
+  /* Sub-description*/
+  .step-desc {
+    font-size: 16px; /* From Figma pdf */
+    text-align: center;
+    max-width: 100%;
+    padding-top: 24px;
+    padding-bottom: 45px;
+    padding-left: 45px;
+    padding-right: 45px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+  }
+
+  .how-wrapper {
+    flex-direction: column;
+    /* padding: 1rem; */
+  }
+
+  .how-left {
+    padding-right: 0;
+    /* margin-bottom: 2rem; */
+  }
+
+  .vertical-line {
+    display: none;
+  }
+
+  .how-steps {
+    /* gap: 2rem; */
+    align-items: center;
+  }
+
+  .how-step {
+    height: auto;
+    padding-left: 0;
+    border-bottom: none;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .step-row {
+    flex-direction: column;
+    /* gap: 0.5rem; */
+    align-items: center;
+  }
+
+  
+}
+
 
 
 /* 16. Products Page Layout */
@@ -871,7 +946,7 @@ textarea:focus {
   h1 {
     font-size: 28px !important;
   }
-  */
+  
 
   h2 {
     font-size: 28px !important;
@@ -893,6 +968,7 @@ textarea:focus {
     font-size: 16px !important;
   }
   
+  */
 
 }
 
