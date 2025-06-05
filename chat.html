@@ -1,31 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Chat – Treider Gård</title>
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="css/style.css" />
+
   <script src="js/chatbot.js" defer></script>
+
+  <!-- To run the burger menu JS Script: defer = html waits inntil is fully parsed -->
+  <script src="js/main.js" defer></script> 
+
 </head>
+
 <body>
 
-  <div class="mobile-chat-container">
-    <header class="chat-header">
-      <a href="index.html" class="back-btn">← Back</a>
-    </header>
+  <!-- NAVIGATION BANNER: Updated to support both desktop & Mobile across all its pages - 05.06.2025 -->
+  <header role="banner">    
+    <nav>
+      <h1 class="logo">Treider Gård</h1>
 
-    <main class="chat-messages" id="chatMessages"></main>
+       <!-- Toggle button for mobile -->
+      <button id="navToggle" class="nav-toggle" aria-label="Toggle navigation">
+        ☰
+      </button>
 
-    <form id="chatForm" class="chat-form">
-      <input
-        type="text"
-        id="chatInput"
-        placeholder="What can I help you with..."
-        autocomplete="off"
-      />
-      <button type="submit" class="send-btn">➤</button>
-    </form>
-  </div>
+      <!-- Links for both desktop & mobile -->
+      <div class="nav-links">
+        <h1 class="logo mobile-only">MENU</h1>
+        <hr class="mobile-divider" />
+
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li class="mobile-only"><a href="chat.html">Chat</a></li>
+
+        </ul>
+
+        <!-- Bottom button, mobile only -->
+        <button class="checkout-btn mobile-only">CheckOut</button>
+
+      </div>
+    </nav>
+  </header>
+
+  <!-- CHAT SECTION -->
+  <main class="chatbot fullscreen">
+    <div class="chat-window">
+      <div class="chat-messages" id="chatMessages">
+        <p class="bot">🤖 What can I help you with...</p>
+      </div>
+      <form id="chatForm" class="chat-form">
+        <input
+          type="text"
+          id="chatInput"
+          placeholder="Type your question..."
+          autocomplete="off"
+        />
+        <button type="submit" class="send-btn">➤</button>
+      </form>
+    </div>
+  </main>
+
 
 </body>
+
 </html>

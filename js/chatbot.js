@@ -18,9 +18,9 @@ document.addEventListener("DOMContentLoaded", () => {
     if (!userMessage) return; // Exit if user clicked send but didn't wrote a message
 
     // Show user message
-    appendMessage("You", "🧑 " + userMessage);
+    appendMessage("user", userMessage);
     chatInput.value = "";
-    appendMessage("DaniBot", "🤖 Thinking...");
+    appendMessage("bot", "🤖 Thinking...");
 
     try {
       const response = await fetch("https://api.openai.com/v1/chat/completions", {
@@ -51,7 +51,7 @@ document.addEventListener("DOMContentLoaded", () => {
       console.log("OpenAI raw response:", data); // For testing
 
       const botReply = data.choices?.[0]?.message?.content || "Opps! That one went over my circuits! Try asking a different way?";
-      replaceLastMessage("DaniBot", botReply);
+      replaceLastMessage("bot", botReply);
 
     } catch (error) {
       replaceLastMessage("DaniBot", "Failed to connect. Wait and try again later.");
@@ -74,11 +74,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const msg = document.createElement("p");
 
     // Apply class based on who sent the message
-    if (sender === "You") {
-      msg.classList.add("user");
-    } else {
-      msg.classList.add("bot");
-    }
+    msg.classList.add(sender); // 'user' or 'bot'
 
     // Use textContent to avoid HTML injection issues
     msg.textContent = text;
@@ -99,8 +95,8 @@ document.addEventListener("DOMContentLoaded", () => {
   function replaceLastMessage(sender, text) {
     const last = chatMessages.lastElementChild;
     if (last) {
-      last.className = sender === "You" ? "user" : "bot";
-      last.innerHTML = text;
+      last.className = sender;
+      last.textContent = text;
     }
   }
 
