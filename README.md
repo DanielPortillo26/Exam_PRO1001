@@ -45,8 +45,27 @@ We have created a design of the solution and your task is to implement the desig
 - Vanilla JavaScript (ES6+)
 - OpenAI Chat API (GPT 3.5)
 - Figma for design reference
+- Leaflet.js – for the interactive map display
 
+## How to Run the Project
 
+1. Clone or download this repository.
+    - Other option is, from Github, from the index.html page, click on raw, and simply replace 'githubusercontent' for 'githubhack' in the url.
+2. Open `index.html` in your browser.
+3. For chatbot functionality:
+   - Insert your OpenAI API key in `chatbot.js`:
+     ```js
+     const API_KEY = "API-KEY";
+     ```
+   - Open `chat.html` or click the "Chat" link in the mobile menu.
+
+## Accessibility & Performance
+
+- Follows WCAG 2.1 AA guidelines
+- Keyboard navigable menu and form controls
+- Responsive font sizes and layouts using media queries
+- Optimized images and lazy loading considered
+- Uses semantic HTML elements
 
 ## 📁 File Structure & Resources
 
