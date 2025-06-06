@@ -1,4 +1,7 @@
-# Exam PRO1001 - Project
+# Exam PRO1001 - Project 
+This work consists of web app promoting sustainable and local produce delivery from Treider Gård (Example famr), built with HTML5, CSS3, and JavaScript. The application showcases seasonal picks, farm information, product listings, and includes a conversational AI chatbot to assist users.
+
+Designed with a mobile-first approach and refined to match the project's Figma prototype as close as possible but given my own tweaks, both for lack of time, and as some sort of testing new things.
 
 
 ## 🛠️ How to Run It
@@ -25,58 +28,24 @@ We have created a design of the solution and your task is to implement the desig
 
     Task: Create an interactive website for the webshop. You must implement the design provided in Figma, focusing on responsiveness, accessibility, and performance. 
 
-## 🚀 Features - Requirements
-Make sure that you clearly understand the Project Assignment Brief and seek clarifications as needed from your teacher. This sets the foundation for your project and ensures you have a clear direction.
+## 🚀 Features
+- Mobile-first responsive design with desktop support
+- Toggle mobile navigation menu with animated transitions
+- Product listing with scrollable cards and seasonal tags
+- Informational sections such as "How It Works" and interactive farm map
+- Accessible and styled contact form
+- Newsletter signup section
+- Dedicated chatbot page with OpenAI integration
+- Floating chatbot icon and window on desktop
 
-You are expected to meet the following requirements for your project:
+## Technologies Used
 
-1. Web Development
+- HTML5 + semantic structure
+- CSS3 + Flexbox + Media Queries
+- Vanilla JavaScript (ES6+)
+- OpenAI Chat API (GPT 3.5)
+- Figma for design reference
 
-    Implement the provided design specification using HTML5, CSS3, and JavaScript
-    Create a clear, intuitive user interface following the given design
-    Ensure the website is fully responsive across all devices
-    Use semantic HTML elements appropriately to structure your content
-    Apply CSS flexbox or grid for layout management
-    Implement client-side form validation using JavaScript where applicable
-    Use ES6+ features and demonstrate understanding of both functional and object-oriented programming paradigms
-
-2. AI Integration
-
-    Integrate an AI-powered chatbot using the OpenAI API
-    Implement error handling for API calls and provide appropriate user feedback
-    Address AI safety and ethical considerations in your implementation
-    Document your use of AI, including any limitations or potential biases
-
-3. API Integration
-
-    Integrate at least one additional third-party API (besides the OpenAI API) into your solution
-    Use asynchronous JavaScript (Promises or async/await) for API interactions
-    Implement proper error handling and loading states for all API calls
-
-4. Performance and Optimisation
-
-    Ensure fast load times and smooth performance, particularly for AI-powered features
-    Optimise your code and assets for performance
-
-5. Accessibility and Web Standards
-
-    Adhere to WCAG 2.1 Level AA standards for accessibility
-    Implement ARIA attributes where necessary
-    Ensure full keyboard navigability
-
-6. Version Control and Collaboration
-
-    Use Git for version control with a well-structured commit history
-    Host your project on GitHub, using feature branches and pull requests
-    Seek at least one code review from another student before submission
-    Provide at least one code review for another student's project
-
-7. Documentation and Project Management
-
-    Create a comprehensive README.md file that includes a project description, setup instructions, and usage guide
-    Document your development process, including challenges faced and solutions implemented
-    Document what resources did you use to update your knowledge to overcome your problems
-    Include code comments explaining complex logic and document any key design decisions
 
 
 ## 📁 File Structure & Resources
