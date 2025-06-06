@@ -46,6 +46,7 @@ h1, h2, h3, h4 {
 /* Place here to controlled all the sizes across the website. However the 200px is too big, Is this a mistake from the Figma?
   I override the fonts on each section down. The idea of having controll over all the labes is good but I do not have the time for testing and fixing this.
 */ 
+
 h1 {
   font-size: 200px;
   font-family: var(--font-header);
@@ -979,7 +980,7 @@ textarea:focus {
 
 
 /* FONT STYLES (Desktop default): added last minute, not enough time to think of something else */
-/* TESTING FOR MOBILE VERSION USING DEVTOOLS IN CHROME - 04.06.2025 */
+/* TESTET FOR MOBILE VERSION USING DEVTOOLS IN CHROME - 04.06.2025 */
 @media (max-width: 768px) {
 
   /* For Products Layout Mobile version */
@@ -1040,7 +1041,7 @@ textarea:focus {
   height: 95vh;
   margin: 0;
   padding: 0;
-  background: var(--color-bg); 
+  background: var(--color-bg); /* I couldn't fix to strech to the right edge I made this beige cover it a bit */
 }
 
 .chatbot.fullscreen .chat-window {
@@ -1061,7 +1062,6 @@ textarea:focus {
   }
 
 }
-
 
 /* aligns inputbox & send button horizontally */
 .chat-form {
@@ -1133,7 +1133,6 @@ textarea:focus {
 
 
 /* 18. Newsletter Signup: final attempt with the css */
-
 #newsletter-section {
   background-color: var(--color-red);
   color: white;
