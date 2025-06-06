@@ -909,6 +909,7 @@ textarea:focus {
   justify-content: center;
   max-width: 1440px; /* cap total width to avoid spreading of the images if the windows are maximazed */
   margin: 0 auto;
+  padding-bottom: 45px;
 }
 
 .product-card {
@@ -1003,7 +1004,7 @@ textarea:focus {
   .product-grid {
     grid-template-columns: 1fr;
     gap: 30px; /* indicated from Figma pdf */
-    padding: 1rem;
+    padding: 45px;
   }
 
   .product-img-wrapper {    
@@ -1026,20 +1027,32 @@ textarea:focus {
   .product-sub {
     font-size: 0.9rem;
   }
+}
 
-  /* 17. Chat for mobile version: Style */
-  .chatbot.fullscreen .chat-window {
-    position: relative;
-    height: calc(100vh - 100px); /* minus header */
-    display: flex;
-    flex-direction: column;
-    padding: 1rem;
-    background: white;
-    border-radius: 0;
-    border-radius: 20px; /* Rounded edges */
-  }
+/* 17. Chat for mobile version: Style */
+.chatbot.fullscreen {
+  position: fixed;
+  top: 50px;
+  bottom: 50px;
+  left: 0;
+  right: 0;
+  width: 100vw;
+  height: 95vh;
+  margin: 0;
+  padding: 0;
+  background: var(--color-bg); 
+}
 
-  /* Keeps the window in the middle liek floating */
+.chatbot.fullscreen .chat-window {
+  background: var(--color-white);
+  display: flex;
+  box-sizing: border-box;
+  border-radius: 0;
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  /* Keeps the window in the middle like floating */
   .chat-window {
     top: 0;
     right: 0;
@@ -1047,78 +1060,192 @@ textarea:focus {
     left: 0;
   }
 
-  /* aligns inputbox & send button horizontally */
-  .chat-form {
-    display: flex;
-    gap: 0.5rem;
-    align-items: center;
-    margin-top: auto;
-    padding: 0.5rem;
-    flex-direction: row; /* To stack the button and the input side by side and not on top of each other */
+}
+
+
+/* aligns inputbox & send button horizontally */
+.chat-form {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  margin-top: auto;
+  padding: 0.5rem;
+  flex-direction: row; /* To stack the button and the input side by side and not on top of each other */
+}
+
+#chatInput {
+  flex: 1;
+  padding: 0.6rem 1rem;
+  border: 1px solid #ccc;
+  border-radius: 15px;
+  font-size: 1rem;
+  font-family: var(--font-body);
+  outline: none;
+  width: 100%;
+}
+
+.send-btn {
+  background-color: var(--color-red);
+  color: var(--color-white);
+  border: none;
+  border-radius: 20px;
+  padding: 0.6rem 0.6rem;
+  font-size: 1.2rem;
+  cursor: pointer;
+  display: flex;
+  align-items: right;
+  justify-content: right;
+}
+
+/* Is this necessary for mobile ? */
+.send-btn:hover {
+  opacity: 0.8;
+}
+
+.chat-messages {
+  flex: 1;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding: 1rem 0;
+}
+
+.chat-messages p {
+  padding: 10px 15px;
+  border-radius: 25px;
+  max-width: 75%;
+  word-wrap: break-word;
+}
+
+.chat-messages p.user {
+  align-self: flex-end;
+  background-color: var(--color-light-blue);
+  border-bottom-right-radius: 0;
+}
+
+.chat-messages p.bot {
+  align-self: flex-start;
+  background-color: var(--color-bg);
+  border-bottom-left-radius: 0;
+  color: var(--color-text);
+}
+
+
+/* 18. Newsletter Signup: final attempt with the css */
+
+#newsletter-section {
+  background-color: var(--color-red);
+  color: white;
+  text-align: left;
+  padding-bottom: 75px;
+}
+
+.newsletter-container {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.section-subtitle {
+  font-size: 24px;
+  text-transform: uppercase;
+  font-family: var(--font-body);
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+
+.newsletter-divider {
+  width: 90%;
+  border: none;
+  border-top: 1.5px solid white;
+}
+
+.section-title {
+  font-size: 36px;
+  font-family: var(--font-header);
+  margin-top: 45px;
+  margin-bottom: 45px;
+}
+
+.newsletter-description {
+  font-size: 16px;
+  font-family: var(--font-body);
+  padding-bottom: 45px;
+}
+
+.newsletter-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.newsletter-form input,
+.newsletter-submit-btn {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  border: none;
+  border-radius: 25px;
+  font-size: 16px;
+  font-family: var(--font-body);
+}
+
+.newsletter-form input {
+  background-color: var(--color-white);
+  color: var(--color-text);
+}
+
+.newsletter-submit-btn {
+  background-color: var(--color-white);
+  color: var(--color-red);
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.newsletter-submit-btn:hover {
+  background-color: var(--color-red-dark);
+  color: white;
+}
+
+@media (max-width: 768px) {
+
+  #newsletter-section {
+    padding: 1.5rem;
+    padding-bottom: 65px;
   }
 
-  #chatInput {
-    flex: 1;
-    padding: 0.6rem 1rem;
-    border: 1px solid #ccc;
-    border-radius: 15px;
-    font-size: 1rem;
-    font-family: var(--font-body);
-    outline: none;
-    width: 100%;
+  .section-subtitle {
+    padding-top: 32px;
+    padding-bottom: 32px;
   }
 
-  .send-btn {
-    background-color: var(--color-red);
-    color: white;
-    border: none;
-    border-radius: 20px;
-    padding: 0.6rem 0.6rem;
-    font-size: 1.2rem;
-    cursor: pointer;
-    display: flex;
-    align-items: right;
-    justify-content: right;
+  .section-title,
+  .newsletter-description {
+    /* margin-top: 45px; */
+    /* margin-bottom: 45px; */
   }
 
-  /* Is this necessary for mobile ? */
-  .send-btn:hover {
-    opacity: 0.8;
+  .newsletter-form {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1rem;
   }
 
-  .chat-messages {
-    flex: 1;
-    overflow-y: auto;
-    display: flex;
-    flex-direction: column;
-    gap: 0.75rem;
-    padding: 1rem 0;
+  .newsletter-form input,
+  .newsletter-submit-btn {
+    flex: 1 1 30%;
   }
 
-  .chat-messages p {
-    padding: 10px 15px;
-    border-radius: 25px;
-    max-width: 75%;
-    word-wrap: break-word;
+  #newsletterEmail {
+    flex: 1 1 35%;
   }
 
-  .chat-messages p.user {
-    align-self: flex-end;
-    background-color: var(--color-light-blue);
-    border-bottom-right-radius: 0;
+  .newsletter-submit-btn {
+    flex: 1 1 30%;
   }
-
-  .chat-messages p.bot {
-    align-self: flex-start;
-    background-color: var(--color-bg);
-    border-bottom-left-radius: 0;
-    color: var(--color-text);
-  }
-
-
- 
-
 
 }
+
+
 
 
