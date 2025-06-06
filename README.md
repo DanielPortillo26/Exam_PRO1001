@@ -50,7 +50,7 @@ Designed with a mobile-first approach and refined to match the project's Figma p
 - Optimized images and lazy loading considered
 - Uses semantic HTML elements
 
-## 📁 File Structure & Resources
+## 📁 Resources
 
 1. Tools use:
     - Visual Studio Code 
