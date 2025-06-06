@@ -3,30 +3,11 @@ This work consists of web app promoting sustainable and local produce delivery f
 
 Designed with a mobile-first approach and refined to match the project's Figma prototype as close as possible but given my own tweaks, both for lack of time, and as some sort of testing new things.
 
-
 ## 🛠️ How to Run It
 Open `index.html` in a web browser. Etc.. Add more info here later - 01.06.2025
 
 ## 🧑‍💻 Author
 Daniel Portillo
-
-## 📄 Project Brief
-
-You have two options for your Project Assignment:
-
-Sustainable Food Delivery Webshop
-
-A sustainable food delivery service in Norway connects customers with fresh products from local farms. Customers can browse and order groceries online, with deliveries made directly to their homes from partner farms. The service emphasises sustainability and supporting local agriculture. Now, the company wants to enhance their online presence with a new webshop that highlights their commitment to sustainability while making the ordering process easy and intuitive for customers.
-
-We have created a design of the solution and your task is to implement the design. To download the specification and assets (images) for the project go to this link at this link . Inside you will find a pdf with the specification and a folder containing the Images for the project. Here you can also get your copy of the Figma file.
-
-    A main page that showcases the service and some products
-    A product listing page for an overview of available products
-    A contact us form users can get in touch
-    Integration of a map (via an API) displaying the locations of partner farms
-    An AI-powered chatbot for customer service that answers questions about the service and the partner farms
-
-    Task: Create an interactive website for the webshop. You must implement the design provided in Figma, focusing on responsiveness, accessibility, and performance. 
 
 ## 🚀 Features
 - Mobile-first responsive design with desktop support
@@ -53,11 +34,14 @@ We have created a design of the solution and your task is to implement the desig
     - Other option is, from Github, from the index.html page, click on raw, and simply replace 'githubusercontent' for 'githubhack' in the url.
 2. Open `index.html` in your browser.
 3. For chatbot functionality:
-   - Insert your OpenAI API key in `chatbot.js`:
-     ```js
-     const API_KEY = "API-KEY";
-     ```
-   - Open `chat.html` or click the "Chat" link in the mobile menu.
+    - With tou OpenAI account, navigate to the API section.
+    - You'll find a button that mention create API KEY. Copy that.
+    - Insert your OpenAI API key in `chatbot.js`:
+        - Find this variable at the top of the 
+        ```js file
+        const API_KEY = "API-KEY";
+        ```
+    - Ready, now test it in the  `index.html` desktop verison, or click the "Chat" link in the menu burger in the mobile menu.
 
 ## Accessibility & Performance
 
@@ -69,36 +53,25 @@ We have created a design of the solution and your task is to implement the desig
 
 ## 📁 File Structure & Resources
 
-Development Tools
-    Visual Studio Code or another code editor of your choice for writing HTML, CSS, and JavaScript.
-    Git for version control and collaboration. Use GitHub for hosting your project.
-    Browser Developer Tools (e.g., Chrome DevTools) for debugging, performance monitoring, and accessibility testing.
+1. Tools use:
+    - Visual Studio Code 
+    - Git for version control, collaboration, and hosting
+    - Browser Developer Tools for debugging, performance monitoring, and accessibility testing.
 
-Design and Prototyping
-    Figma: Access the provided design specifications and assets for the webshop project.
+2. Design and Prototyping:
+    - Figma: Access the provided design specifications and assets for the webshop project.
 
-API Integration
-    OpenAI API Key so that you can integrate the chatbot.
-    Third-Party API Key of the selected API of your choosing.
+3. API Integration:
+    - OpenAI API Key to integrate the chatbot. Although, it works, I did not have enough credits to fully test this. Next time would have been better to use another one that is free, so I, and other users, don't need to create new accounts to get more credits.
+    - Third-Party API Key Leaflet for interatice map display.
 
-Testing and Debugging
-    Lighthouse: A tool built into Chrome Developer Tools for assessing the performance, accessibility, and best practices of your web application.
+3. Testing and Debugging
+    - DevTools
+    - Lighthouse: A tool built into Chrome Developer Tools for assessing the performance, accessibility, and best practices of your web application.
 
-## 📁 Submission Requirements
+## Credits
 
-Individual Deliverable
-
-A GitHub repository containing:
-    All source code
-    Documentation (in PDF format)
-    A comprehensive README.md file
-    Maintain a clear commit history demonstrating your development process.
-
-An Individual Reflective Journal (PDF format, 1000-1100 words) detailing:
-    Your development process
-    Challenges faced and solutions implemented
-    Insights from the code review process
-    Ethical considerations in AI implementation
-    Future improvements or expansions for your project
-
-
+- Project brief and design: Provided by course/assignment
+- OpenAI API: https://platform.openai.com
+- Leaflet for allowing free open source access to pinpoint maps
+- Font: Frank Ruhl Libre, Arimo (via Google Fonts)
