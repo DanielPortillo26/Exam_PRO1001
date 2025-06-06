@@ -1,5 +1,7 @@
 # Exam PRO1001 - Project 
-This work consists of web app promoting sustainable and local produce delivery from Treider Gård (Example famr), built with HTML5, CSS3, and JavaScript. The application showcases seasonal picks, farm information, product listings, and includes a conversational AI chatbot to assist users.
+This work consists of web app, promoting sustainable and local produce delivery from Treider Gård (an example farm).
+It was built with HTML5, CSS3, and JavaScript. 
+The application showcases seasonal picks, farm information, product listings, and includes a conversational AI chatbot to assist users.
 
 Designed with a mobile-first approach and refined to match the project's Figma prototype as close as possible but given my own tweaks, both for lack of time, and as some sort of testing new things.
 
