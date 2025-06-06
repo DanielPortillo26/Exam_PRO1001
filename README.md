@@ -3,11 +3,8 @@ This work consists of web app promoting sustainable and local produce delivery f
 
 Designed with a mobile-first approach and refined to match the project's Figma prototype as close as possible but given my own tweaks, both for lack of time, and as some sort of testing new things.
 
-## 🛠️ How to Run It
-Open `index.html` in a web browser. Etc.. Add more info here later - 01.06.2025
-
 ## 🧑‍💻 Author
-Daniel Portillo
+- Daniel Portillo
 
 ## 🚀 Features
 - Mobile-first responsive design with desktop support
@@ -19,7 +16,7 @@ Daniel Portillo
 - Dedicated chatbot page with OpenAI integration
 - Floating chatbot icon and window on desktop
 
-## Technologies Used
+## 🦾 Technologies Used
 
 - HTML5 + semantic structure
 - CSS3 + Flexbox + Media Queries
@@ -28,7 +25,7 @@ Daniel Portillo
 - Figma for design reference
 - Leaflet.js – for the interactive map display
 
-## How to Run the Project
+## 🛠️ How to Run the Project
 
 1. Clone or download this repository.
     - Other option is, from Github, from the index.html page, click on raw, and simply replace 'githubusercontent' for 'githubhack' in the url.
@@ -37,13 +34,13 @@ Daniel Portillo
     - With tou OpenAI account, navigate to the API section.
     - You'll find a button that mention create API KEY. Copy that.
     - Insert your OpenAI API key in `chatbot.js`:
-        - Find this variable at the top of the 
+        - Find this variable at the top of the file:
         ```js file
         const API_KEY = "API-KEY";
         ```
     - Ready, now test it in the  `index.html` desktop verison, or click the "Chat" link in the menu burger in the mobile menu.
 
-## Accessibility & Performance
+## 🦮 Accessibility & Performance
 
 - Follows WCAG 2.1 AA guidelines
 - Keyboard navigable menu and form controls
@@ -69,9 +66,9 @@ Daniel Portillo
     - DevTools
     - Lighthouse: A tool built into Chrome Developer Tools for assessing the performance, accessibility, and best practices of your web application.
 
-## Credits
+## 🥇 Credits
 
 - Project brief and design: Provided by course/assignment
 - OpenAI API: https://platform.openai.com
-- Leaflet for allowing free open source access to pinpoint maps
+- Leaflet: https://leafletjs.com for allowing free open source access to their library
 - Font: Frank Ruhl Libre, Arimo (via Google Fonts)
